@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list</title>
+</head>
+<style>
+    fieldset{ 
+        margin-left: 500px;
+        margin-right: 500px;
+       color: blueviolet;  
+    }
+     
+</style>
+<body align="center">
+    <h1 style="color: rgb(236, 175, 175);">SM High Tech Industrial Engineering Care</h1>
+    <h1 style="color: rgb(132, 132, 230);">Course Name : Web Development</h1>
+    <h3 style="color: rgb(113, 128, 0);">Submitted To : Abdullah Al Mamun </h3>
+    <p style="color: rgb(0, 255, 200)"> Submitted By : hira </p> 
+
+    <form>
+        <fieldset>  
+            <legend><strong><h2>   To-do Form</h2> </strong></legend>
+            <input type="text"  id="name" placeholder="Your Name" required><br><br>
+            <input type="text"  id="polytechnic" placeholder="Your polytechnic" required><br><br>
+            <input type="number"id="classNo" placeholder="Class No." required><br><br>
+            <input type="date" id="classDate" placeholder="Input Date" required> <br><br>
+            <input type="text" id="toolUsed" placeholder="Class Tool Used" required><br><br>
+            <input type="text" id="workDetails" placeholder="Class Work Details" required><br><br>
+            <input type="text" id="remarks" placeholder="Remarks" required><br><br>
+            <input type="button" value="Submit Hira" onclick="addRow()" id="submit"></button>
+        </fieldset>
+    </form><br>
+    <table id="table" border="1" align="center" style="width: 400px;">
+        <thead id="table-body">
+            <tr>
+                <th>Your Name</th>
+                <th>Your Polytechnic</th>
+                <th>Class No.</th>
+                <th>Class Date</th>
+                <th>Class Tools Used</th>
+                <th>Class Work Details</th>
+                <th>Remarks</th>
+                
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script >
+        function addRow() {
+            "use strict";
+
+            var tableBody = document.getElementById("table-body");
+
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            var td4 = document.createElement("td");
+            var td5 = document.createElement("td");
+            var td6 = document.createElement("td");
+            var td7 = document.createElement("td");
+            var row = document.createElement("tr");  
+
+
+
+            td1.innerHTML = document.getElementById("name").value;
+            td2.innerHTML = document.getElementById("polytechnic").value;
+            td3.innerHTML = document.getElementById("classNo").value;
+            td4.innerHTML = document.getElementById("classDate").value;
+            td5.innerHTML = document.getElementById("toolUsed").value;
+            td6.innerHTML = document.getElementById("workDetails").value;
+            td7.innerHTML = document.getElementById("remarks").value;
+            
+
+            row.appendChild(td1);
+            row.appendChild(td2);
+            row.appendChild(td3);
+            row.appendChild(td4);
+            row.appendChild(td5);
+            row.appendChild(td6);
+            row.appendChild(td7);
+            tableBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>
